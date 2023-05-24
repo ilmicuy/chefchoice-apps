@@ -67,6 +67,9 @@ body {
   font-size: 32px;
   display: block;
   padding: 10px;
+  &:hover {
+    color: $color_5;
+  }
 }
 .nav {
   display: flex;
