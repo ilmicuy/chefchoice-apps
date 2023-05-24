@@ -29,9 +29,11 @@ $background-color_1: rgb(39, 55, 77);
   .nav__item {
     display: list-item;
     border-bottom: 0.5px solid #e0e0e0;
-    margin-bottom: 10px;
     width: 100%;
     text-align: left;
+    &:last-child {
+      border-bottom: none;
+    }
   }
   .hero__tagline {
     margin-inline: 50px;
