@@ -38,6 +38,25 @@ $background-color_1: rgb(39, 55, 77);
   .hero__tagline {
     margin-inline: 50px;
   }
+  .detail {
+    grid-template-columns: auto 1fr;
+  }
+  .detail__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .detail__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .detail__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    p {
+      font-size: 16px;
+    }
+  }
 }
 @media screen and (min-width: 650px) {
   .nav {
@@ -93,6 +112,7 @@ $background-color_1: rgb(39, 55, 77);
     display: none;
   }
 }
+
 @media screen and (min-width: 800px) {
   .nav {
     display: flex;
@@ -148,4 +168,5 @@ $background-color_1: rgb(39, 55, 77);
   main {
     max-width: 1200px;
   }
+
 }
