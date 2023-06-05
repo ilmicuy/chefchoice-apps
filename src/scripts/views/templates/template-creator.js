@@ -1,8 +1,11 @@
 import CONFIG from '../../global/config';
- 
+
 const createRestaurantDetailTemplate = (restaurant) => `
+  <div>
   <h2 class="detail__title">${restaurant.name}</h2>
   <img class="detail__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+  
+  </div>
   <div class="detail__info">
     <h3>Information</h3>
     <h4>City</h4>
@@ -11,13 +14,26 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <p>${restaurant.address}</p>
     <h4>Rating</h4>
     <p>${restaurant.rating}</p>
+    <h3>Menu</h3>
+    <h4>Foods</h4>
+    <p>${restaurant.menus.foods.map((food) => food.name).join(', ')}</p>
+    <h4>Drinks</h4>
+    <p>${restaurant.menus.drinks.map((drink) => drink.name).join(', ')}</p>
   </div>
   <div class="detail__overview">
-    <h3>Overview</h3>
+  <h3>Overview</h3>
     <p>${restaurant.description}</p>
   </div>
 `;
- 
+
+const createRestaurantReviewTemplate = (review) => `
+<div class="review">
+    <p>${review.name}</p>
+    <p>${review.review}</p>
+    <p>${review.date}</p>
+<div>
+`;
+
 const createRestaurantItemTemplate = (restaurant) => `
 <article class="post-item">
 <div class="post-item__card">
@@ -44,9 +60,10 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
-export { 
-    createRestaurantItemTemplate, 
-    createRestaurantDetailTemplate, 
-    createLikeButtonTemplate,
-    createLikedButtonTemplate, 
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createRestaurantReviewTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };

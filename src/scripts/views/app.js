@@ -1,17 +1,19 @@
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
- 
+
 class App {
-  constructor({ button, drawer, content, hero }) {
+  constructor({
+    button, drawer, content, hero,
+  }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
     this._hero = hero;
- 
+
     this._initialAppShell();
   }
- 
+
   _initialAppShell() {
     DrawerInitiator.init({
       button: this._button,
@@ -19,7 +21,7 @@ class App {
       content: this._content,
       hero: this._hero,
     });
- 
+
     // kita bisa menginisiasikan komponen lain bila ada
   }
 
@@ -30,5 +32,5 @@ class App {
     await page.afterRender();
   }
 }
- 
+
 export default App;

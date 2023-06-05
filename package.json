@@ -7,7 +7,8 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "serve": "http-server dist"
+    "serve": "http-server dist",
+    "build-serve": "npm run build && npm run serve"
   },
   "keywords": [],
   "author": "Muhammad Nur Ilmi <mnurilmi2016.email@domain.com>",

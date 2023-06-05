@@ -161,6 +161,12 @@ main {
 }
 .content {
   padding: 32px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content__heading {
+  font-weight: normal;
 }
 .explore {
   width: 100%;
@@ -250,15 +256,27 @@ main {
   width: 100%;
   max-width: 800px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 18px 16px;
 }
 .detail__poster {
   width: 100%;
   max-width: 400px;
 }
-.detail__info h4 {
-  margin: 8px 0;
+.detail__info {
+  h3, h4 {
+    margin-top: 10px;
+  }
+}
+#detail-review {
+  margin: 0;
+}
+.detail__overview h3 {
+  margin-bottom: 5px;
+}
+
+.review {
+  margin-block: 5px;
 }
 
 .like {
@@ -268,13 +286,13 @@ main {
   align-items: center;
   justify-content: center;
   background-color: #db0000;
-  
+
   position: fixed;
   bottom: 16px;
   right: 16px;
   border-radius: 50%;
   border: 0;
-  
+
   font-size: 18px;
   color: white;
   cursor: pointer;
