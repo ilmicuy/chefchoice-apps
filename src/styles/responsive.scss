@@ -141,6 +141,10 @@ $background-color_1: rgb(39, 55, 77);
     justify-content: center;
     padding-inline: 2em;
   }
+  .detail__poster {
+    width: 100%;
+    max-width: none;
+  }
 }
 @media screen and (min-width: 900px) {
   .nav {
