@@ -258,10 +258,26 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px 16px;
+  p {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+}
+.detail__title {
+  margin-bottom: 15px;
 }
 .detail__poster {
   width: 100%;
   max-width: 400px;
+  min-height: 280px;
 }
 .detail__info {
   h3, h4 {
