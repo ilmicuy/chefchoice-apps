@@ -9,7 +9,7 @@ Before(({ I }) => {
 Scenario('unliking restaurant', async ({ I }) => {
   I.see('Tidak ada favorite restaurant yang ditampilkan', '.restaurant-item__not__found');
 
-  I.amOnPage('/');
+  I.amOnPage('#/');
 
   I.seeElement('.post-item__title a');
 
@@ -20,7 +20,7 @@ Scenario('unliking restaurant', async ({ I }) => {
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.amOnPage('/#/like');
+  I.amOnPage('#/like');
   I.seeElement('.post-item');
 
   const likedRestaurantTitle = await I.grabTextFrom('.post-item__title');
