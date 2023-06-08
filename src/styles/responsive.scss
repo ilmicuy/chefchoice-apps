@@ -35,6 +35,9 @@ $background-color_1: rgb(39, 55, 77);
       border-bottom: none;
     }
   }
+  .hero__inner {
+    margin-top: 30px;
+  }
   .hero__tagline {
     margin-inline: 50px;
   }
@@ -75,7 +78,14 @@ $background-color_1: rgb(39, 55, 77);
     display: none;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 5, 0.5), rgba(0, 0, 5, 0.5)),
+    url("../public/images/hero-image_4-small.webp");
+    min-height: 50vh;
+  }
+}
+@media screen and (min-width: 701px) {
   .nav {
     display: flex;
     justify-content: space-around;
@@ -89,6 +99,11 @@ $background-color_1: rgb(39, 55, 77);
     flex: 1.2;
     justify-content: center;
     margin-top: 8px;
+  }
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 5, 0.5), rgba(0, 0, 5, 0.5)),
+    url("../public/images/hero-image_4-large.webp");
+    min-height: 60vh;
   }
   .posts {
     display: grid;
@@ -114,7 +129,6 @@ $background-color_1: rgb(39, 55, 77);
     right: 25px;
   }
 }
-
 @media screen and (min-width: 800px) {
   .nav {
     display: flex;
