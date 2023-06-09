@@ -5,6 +5,38 @@ $background-color_1: rgb(39, 55, 77);
   display: grid;
   grid-row-gap: 16px;
 }
+@media screen and (max-width: 500px) {
+  .post-item__thumbnail {
+    width: 100%;
+    height: 230px;
+  }
+  .post-item__location {
+    position: absolute;
+    top: 180px;
+    left: 25px;
+  }
+  .post-item__rating {
+    position: absolute;
+    top: 180px;
+    right: 25px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .post-item__thumbnail {
+    width: 100%;
+    height: 250px;
+  }
+  .post-item__location {
+    position: absolute;
+    top: 200px;
+    left: 25px;
+  }
+  .post-item__rating {
+    position: absolute;
+    top: 200px;
+    right: 25px;
+  }
+}
 @media screen and (max-width: 650px) {
   .nav__list {
     display: block;
@@ -40,20 +72,6 @@ $background-color_1: rgb(39, 55, 77);
   }
   .hero__tagline {
     margin-inline: 50px;
-  }
-  .post-item__thumbnail {
-    width: 100%;
-    height: 250px;
-  }
-  .post-item__location {
-    position: absolute;
-    top: 200px;
-    left: 25px;
-  }
-  .post-item__rating {
-    position: absolute;
-    top: 200px;
-    right: 25px;
   }
   .detail {
     grid-template-columns: auto 1fr;
