@@ -6,9 +6,15 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ],
+    minimize: true,
     splitChunks: {
       chunks: 'all',
       minSize: 20000,
@@ -43,7 +49,7 @@ module.exports = {
     rules: [
       {
         test: /.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -64,7 +70,8 @@ module.exports = {
         },
       ],
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: [path.join(__dirname, 'dist/**/*')] }),
+    new MiniCssExtractPlugin(),
     new ImageminWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
